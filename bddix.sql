@@ -158,7 +158,7 @@ group by p.nom_province;
 
 --26. Nombre de potions différentes absorbées par chaque habitant (nom et nombre). (9lignes)
 
-select h.nom, count(p.lib_potion)
+select h.nom, count(distinct p.lib_potion)
 from habitant h 
 inner join absorber a on h.num_hab= a.num_hab
 inner join potion p on a.num_potion = p.num_potion
